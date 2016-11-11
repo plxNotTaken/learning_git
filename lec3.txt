@@ -1,0 +1,23 @@
+/* cloning a repository */
+
+-> git clone http://github.com/example.git (* clones into example *)
+-> git clone http://github.com/example.git my_folder (* clones into my_folder *)
+
+3 steps in git clone:
+  1. downloads entire repo into a new directory
+  2. adds origin remote poiting to the clone URL
+  3. checks out initial branch (usually master)
+
+/* Creating a branch */
+
+-> git branch buggy
+-> git checkout buggy (* switches to buggy branch *)
+-> git checkout -b buggy (* creates buggy brunch and switches to it at same time *)
+-> git add file.txt
+-> git commit -m "file.txt"
+
+/* Merging branches */
+
+-> git checkout master (* switch to branch we want to merge into *)
+-> git merge buggy (* merge buggy branch into master branch *)
+-> git branch -d buggy (* delete buggy branch *)

@@ -1,0 +1,41 @@
+/* compare files for differences */
+
+-> git diff (* changed between working directory and index *)
+            (* shows what has been changed, but is not staged for commit *)
+-> git diff --staged (* shows changes between the index and the HEAD( last commit on this branch *)
+                     (* shows what has been added to the index and staged for commit *)
+
+/* unstaging file */
+
+-> git reset HEAD file.txt (* HEAD refers to last commit on branch that we are one *)
+                           (* takes file.txt out of the staging area *) 
+-> git checkout -- file.txt (* restores file.txt to version in last commit *)
+
+/* undo commit */
+
+-> git reset --soft HEAD^ (* undo last commit, move everything back into staging area *)
+                       (* ^ move to commit one before current head *) 
+-> git reset --hard HEAD^ (* undo last commit and dont put files into staging area *)
+                       (* use when things go wrong *)
+-> git reset --hard HEAD^ (* undo last 2 commits *)
+
+/* make changes to a commit */
+
+-> git add forgotten.txt 
+-> git commit --ammend -m "new message"
+
+/* adding a remote */
+
+-> git remote add origin http://github.com/something.git (* origin is the name of this remote *)
+                                                         (* just bookmarking. origin refers to this url *)
+-> git remote -v (* show remote repositories *)
+-> git push -u origin master (* origin = repository name *)
+                             (* master = local branch *)
+                             (* -u = no need to specify name of branch in future branches, just git push *)
+/* pulling from a remote */
+
+-> git pull 
+
+/* remove a remote */
+
+-> git remote rm <name>

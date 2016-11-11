@@ -1,0 +1,22 @@
+/* help */
+
+-> git help config
+
+/* setting up git */
+
+-> git config --global user.name "your name here"
+-> git config --global user.email "your email here"
+-> git config color.ui true
+
+/* git workflow */
+
+-> git init (* initializes empty git repository *)
+-> git status (* check what has changed since last commit *)
+-> git add file.txt (* add file.txt to staging area *) 
+                    (* starts tracking untracked files *)
+-> git add --all (* adds all new or modified files in currenty directory *)
+-> git add *.txt (* add all txt files in current directory *)
+-> git add "*.txt" (* add all txt files in entire project *)
+-> git commit -m (* creates snapshot of the stage along with a message *)
+                 (* adds snapshot to the timeline *)
+-> git log (* get timeline history *)
